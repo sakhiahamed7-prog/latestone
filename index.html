@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ledger — a plain task list</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page__header">
+      <h1 class="page__title">Ledger</h1>
+      <p class="page__subtitle">Write it down. Cross it off.</p>
+    </header>
+
+    <form id="task-form" class="entry">
+      <input
+        id="task-input"
+        class="entry__input"
+        type="text"
+        placeholder="Add a task..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="entry__button">Add</button>
+    </form>
+
+    <section class="ledger">
+      <ul id="task-list" class="ledger__list"></ul>
+      <p id="empty-state" class="ledger__empty">Nothing on the ledger yet.</p>
+    </section>
+
+    <footer class="page__footer">
+      <span id="count-label">0 tasks</span>
+      <button id="clear-done" class="footer__clear" type="button">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
